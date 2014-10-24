@@ -1,0 +1,32 @@
+<h1>Listing project_administrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>User</th>
+      <th>Hours</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_administrations.each do |project_administration| %>
+      <tr>
+        <td><%= project_administration.project.name %></td>
+        <td><%= project_administration.project.user.email %></td>
+        <td><%= project_administration.hours %></td>
+        <td><%= project_administration.status %></td>
+        <td><%= link_to 'Show', project_administration %></td>
+        <td><%= link_to 'Edit', edit_project_administration_path(project_administration) %></td>
+        <td><%= link_to 'Destroy', project_administration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project administration ...', new_project_administration_path %> | 
+<%= link_to 'Find Project administration ...', find_project_administrations_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_administration.project_id %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @project_administration.hours %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project_administration.status %>
+</p>
+
+<%= link_to 'Edit', edit_project_administration_path(@project_administration) %> |
+<%= link_to 'Back', project_administrations_path %>

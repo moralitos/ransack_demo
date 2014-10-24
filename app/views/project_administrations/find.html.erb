@@ -1,0 +1,9 @@
+<%= search_form_for @q do |f| %>
+  user email: <%= f.search_field :project_user_email_cont %>
+<br>
+project name: <%=f.search_field :project_name_cont%>
+<br>
+administration status: <%=f.search_field :status_eq%>
+<br>
+<%= submit_tag %>
+<% end %>
